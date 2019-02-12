@@ -47,3 +47,32 @@ print(x,y)
 print("Simple interest: \(si(amount: 1000, rate: 10, noOfYear: 3))")
 print("def in: \(si(amount: 1000, rate: 10))")
 
+
+//Multiplication Div Rem
+func mul(a:Float,b:Float) -> Float{
+    return (a*b)
+}
+func divi(a:Float,b:Float) -> Float{
+    return (a/b)
+}
+func rem(a:Int,b:Int) -> Float{
+    return (Float)(a%b)
+}
+print("Product: \(mul(a: 5, b: 2))")
+print("Quotient: \(divi(a: 5, b: 2))")
+print("Remainder: \(rem(a: 5, b: 2))")
+
+//Number reversal
+func numrev(num:Int) -> Int{
+    var c=0
+    var d=num;
+    while(d != 0){
+        c=(c*10)+(d%10)
+        d=d/10;
+    }
+    return c//((num%10)*10)+(num/10)//+((num/10))
+}
+var n=34
+print("Number: \(n)")
+print("Number after reverseal: \(numrev(num: n))")
+
