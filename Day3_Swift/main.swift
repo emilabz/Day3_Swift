@@ -76,3 +76,39 @@ var n=34
 print("Number: \(n)")
 print("Number after reverseal: \(numrev(num: n))")
 
+//example recursion
+/*func display(n:Int){
+if(n == 1){
+        print(1)
+    }
+    //print(n)
+    //return display(n: n-1)
+    print(n)
+        display(n: n-1)
+}
+print(display(n: 10))
+*/
+func power(num:Int) -> Int{
+    var x=1;
+    var n=num
+    while n != 0 {
+        x=x*2
+        n-=1
+    }
+    return x;
+}
+func bin2d(num:Int) -> Int{
+    var c=0;
+    var d=num;
+    var val=0;
+    while(d != 0){
+        if(d%10 != 0){
+        val+=(d%10)*power(num: c)
+        }
+        d/=10
+        c=c+1
+    }
+    return val;//((num%10)*10)+(num/10)//+((num/10))
+}
+var dec=111;
+print("Decimal:\(dec)\t Binary: \(bin2d(num: dec))")
